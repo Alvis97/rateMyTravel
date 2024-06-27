@@ -1,2 +1,2 @@
-# travelBuddy
-travel buddy- an online community
+# rateMyTravel
+rate my travel- an online community
