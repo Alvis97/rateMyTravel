@@ -1,0 +1,63 @@
+
+@mixin transition{
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin smallShadow ($shadowColor: --gray) {
+    box-shadow:  1px 1px 2px rgb(var($shadowColor),0.2),
+        -1px -1px 2px rgb(var($shadowColor), 0.2);
+}
+
+@mixin bigShadow($shadowColor: --gray) {
+    box-shadow:  5px 5px 10px rgb(var($shadowColor),0.5),
+    -5px -5px 10px rgb(var($shadowColor), 0.2);
+}
+
+@mixin CFAButton($backgroundColor: --yellow, $borderShadowColor: --gray, $textColor: --darkBlue){
+    background-color: rgb(var(--yellow), 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: var(--bigRadius);
+    margin: auto 10px;
+    //box-shadow: 0.1em 0.1em rgb(var($borderShadowColor), 0.2);
+    @include smallShadow($borderShadowColor);
+    border: 1px solid rgb(var($borderShadowColor), 0.8);
+    text-align: center;
+    cursor: pointer;
+    @include transition();
+
+    span{
+        color: rgb(var($textColor));
+        font-family: 'RozhaOne', sans-serif; // Add the font-family here
+    }
+
+    &:hover{
+        box-shadow: none;
+        background-color: rgb(var($backgroundColor));
+        //border-color: rgb(var($borderShadowColor), 0.8);
+
+        span, svg{
+            animation: dribble 0.5s ease-in-out;
+        }
+    }
+}
+
+@mixin link{
+    color: rgb(var(--darkBlue));
+    font-family: Roboto;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+  
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
+

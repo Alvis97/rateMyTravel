@@ -1,0 +1,36 @@
+@use '../mixins.module.scss' as mixins;
+
+.Parent{
+   width: 100vW;
+   height: 70px;
+   padding: 6px 0px 0 10px;
+   background-color: rgb(var(--white));
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-sizing: border-box;
+
+   :nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   .section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+}
+
+.CFAButton{
+    @include mixins.CFAButton();
+}
+
+.link{
+    @include mixins.link();
+    margin: 0 20px;
+  }
+
+
+

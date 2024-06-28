@@ -1,0 +1,31 @@
+
+@use './mixins.module.scss' as mixins;
+// Variables
+:root {
+  --beige: 234, 233, 227;
+  --darkBlue: 0, 22, 77;
+  --white: 255, 255, 255;
+  --yellow: 254, 219, 102;
+  --gray: 125, 145, 161;
+
+  //radius
+  --smallRadius: 5px;
+  --bigRadius: 15px;
+}
+
+body{
+    background-color: rgb(var(--beige));
+    margin: 0;
+    padding: 0;
+}
+
+// Fonts
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: RozhaOne;
+  src: url(./fonts/RozhaOne-Regular.ttf);
+}
